@@ -12,8 +12,6 @@ namespace RH.Models
 
         private double _tier;
 
-        public ICollection<Job> Jobs = new List<Job>();       
-
         public Technology()
         {
         }
@@ -33,26 +31,6 @@ namespace RH.Models
         public void setTier(double tier)
         {
             _tier = tier;
-        }
-        
-        public void addJobs(Job job)
-        {
-            this.Jobs.Add(job);
-        }
-
-        public void removeJobs(Job job)
-        {
-            this.Jobs.Remove(job);
-        }
-
-        public int totalJobs()
-        {
-            return this.Jobs.Count();
-        }
-
-        public Job findJobs(Job job)
-        {
-            return this.Jobs.FirstOrDefault(obj => obj == job);
         }
     }
 }

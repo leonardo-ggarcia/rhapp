@@ -35,6 +35,5 @@ C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\RH.genruntimeconfig.ca
 C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\RH.csproj.CopyComplete
 C:\Users\leoga\source\repos\RH\RH\bin\Debug\netcoreapp2.1\Properties\serviceDependencies.json
 C:\Users\leoga\source\repos\RH\RH\bin\Debug\netcoreapp2.1\Properties\serviceDependencies.local.json
-C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\Razor\Views\Technologies\Create.cshtml.g.cs
-C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\Razor\Views\Technologies\Index.cshtml.g.cs
 C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\RH.csproj.CoreCompileInputs.cache
+C:\Users\leoga\source\repos\RH\RH\obj\Debug\netcoreapp2.1\Razor\Views\Jobs\Index.cshtml.g.cs

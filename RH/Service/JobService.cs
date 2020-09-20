@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RH.Data;
+using RH.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace RH.Service
 {
-    public class TechnologyService
+    public class JobService
     {
         private readonly RHContext _context;
 
-        public TechnologyService(RHContext context)
+        public JobService(RHContext context)
         {
             _context = context;
         }
 
-        public async Task insert(TechnologyService technology)
+        public async Task<List<Job>> findAllAsync()
         {
-             await _context.AddAsync(technology);
-             await _context.SaveChangesAsync();
+            return await _context.Job.OrderBy(obj => obj.Name).ToListAsync();
         }
+            
     }
 }
