@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leoga\\source\\repos\\RH\\RH\\RH.csproj": {}
+    "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\RH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leoga\\source\\repos\\RH\\RH\\RH.csproj": {
+    "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\RH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leoga\\source\\repos\\RH\\RH\\RH.csproj",
+        "projectUniqueName": "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\RH.csproj",
         "projectName": "RH",
-        "projectPath": "C:\\Users\\leoga\\source\\repos\\RH\\RH\\RH.csproj",
+        "projectPath": "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\RH.csproj",
         "packagesPath": "C:\\Users\\leoga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leoga\\source\\repos\\RH\\RH\\obj\\",
+        "outputPath": "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

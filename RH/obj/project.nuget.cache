@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fxt1sXKBhmZXjC0SxjwtUEEE884/mOqkUwaqrOWdZ1h6GF0Y9vKJGA0V6i75E1o5eEbW/ohPPRsAVI2Ap3nZ3g==",
+  "dgSpecHash": "AgXmsWLhY/Bt4+SnKyqJLSRoycbNNPiknwdyWekG/VnEp9m9THn4EJgiwofZ+3ucJ5k5pKs/RI18qqdKDshKDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leoga\\source\\repos\\RH\\RH\\RH.csproj",
+  "projectFilePath": "C:\\Users\\leoga\\source\\repos\\RH\\rhapp\\RH\\RH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leoga\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\leoga\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

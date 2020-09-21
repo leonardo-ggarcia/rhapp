@@ -50,11 +50,9 @@ namespace RH.Controllers
         }
 
         // GET: Jobs/Create
-        public  async Task<IActionResult> Create()
-        {
-            var technologies = await _technologyService.findAllAsync();
-            CandidateFormViewModels viewModels = new CandidateFormViewModels { Technologies = technologies };
-            return View(viewModels);
+        public  IActionResult Create()
+        {            
+            return View();
         }
 
         // POST: Jobs/Create       
@@ -63,8 +61,7 @@ namespace RH.Controllers
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Amount")] Job job)
         {
             if (ModelState.IsValid)
-            {
-               
+            {              
 
                 await _jobService.insertAsync(job);
                 return RedirectToAction(nameof(Index));
