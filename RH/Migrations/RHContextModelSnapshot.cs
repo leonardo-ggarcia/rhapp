@@ -17,6 +17,42 @@ namespace RH.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("RH.Models.Cand_Job", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("CandidateId");
+
+                    b.Property<int?>("JobId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("JobId");
+
+                    b.ToTable("Cand_Job");
+                });
+
+            modelBuilder.Entity("RH.Models.Cand_Tech", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("TechnologyId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("TechnologyId");
+
+                    b.ToTable("Cand_Tech");
+                });
+
             modelBuilder.Entity("RH.Models.Candidate", b =>
                 {
                     b.Property<int>("Id")
@@ -32,7 +68,7 @@ namespace RH.Migrations
 
                     b.Property<string>("FullName");
 
-                    b.Property<int?>("JobId");
+                    b.Property<int>("JobId");
 
                     b.Property<string>("Phone");
 
@@ -50,6 +86,8 @@ namespace RH.Migrations
 
                     b.Property<int>("Amount");
 
+                    b.Property<string>("Description");
+
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
@@ -57,10 +95,30 @@ namespace RH.Migrations
                     b.ToTable("Job");
                 });
 
+            modelBuilder.Entity("RH.Models.Tech_Job", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("JobId");
+
+                    b.Property<int?>("TechnologyId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JobId");
+
+                    b.HasIndex("TechnologyId");
+
+                    b.ToTable("Tech_Job");
+                });
+
             modelBuilder.Entity("RH.Models.Technology", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("CheckboxAwnser");
 
                     b.Property<string>("Description");
 
@@ -71,11 +129,47 @@ namespace RH.Migrations
                     b.ToTable("Technology");
                 });
 
+            modelBuilder.Entity("RH.Models.Cand_Job", b =>
+                {
+                    b.HasOne("RH.Models.Candidate", "Candidate")
+                        .WithMany()
+                        .HasForeignKey("CandidateId");
+
+                    b.HasOne("RH.Models.Job", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobId");
+                });
+
+            modelBuilder.Entity("RH.Models.Cand_Tech", b =>
+                {
+                    b.HasOne("RH.Models.Candidate", "Candidate")
+                        .WithMany()
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("RH.Models.Technology", "Technology")
+                        .WithMany()
+                        .HasForeignKey("TechnologyId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("RH.Models.Candidate", b =>
                 {
                     b.HasOne("RH.Models.Job", "Job")
                         .WithMany()
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("RH.Models.Tech_Job", b =>
+                {
+                    b.HasOne("RH.Models.Job", "Job")
+                        .WithMany()
                         .HasForeignKey("JobId");
+
+                    b.HasOne("RH.Models.Technology", "Technology")
+                        .WithMany()
+                        .HasForeignKey("TechnologyId");
                 });
 #pragma warning restore 612, 618
         }

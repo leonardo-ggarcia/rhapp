@@ -15,6 +15,7 @@ namespace RH.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public Job Job { get; set; }
+        public int JobId { get; set; }
         public ICollection<Technology> Technologies = new List<Technology>();
         public Candidate()
         {

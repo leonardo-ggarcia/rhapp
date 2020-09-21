@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authentication;
 
 namespace RH.Models
 {
@@ -10,17 +11,20 @@ namespace RH.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        public bool CheckboxAwnser { get; set; }      
+
         private double _tier;
 
         public Technology()
         {
         }
 
-        public Technology(int id, string name, string description)
+        public Technology(int id, string name, string description, bool chechboxAwnser)
         {
             this.Id = id;
             this.Name = name;
             this.Description = description;
+            this.CheckboxAwnser = chechboxAwnser;
         }
 
         public double getTier()
